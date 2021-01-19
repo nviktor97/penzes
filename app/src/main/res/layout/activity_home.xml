@@ -52,7 +52,7 @@
                             android:paddingLeft="10dp"
                             android:text="Felhasználó neve"
                             android:textColor="@color/cimsorTextB"
-                            android:textSize="24sp"
+                            android:textSize="23sp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
