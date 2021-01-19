@@ -1,0 +1,113 @@
+<resources>
+    <!-- base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Címsor (a képernyő megnevezése) -->
+    <style name="controlBar" parent="TextAppearance.AppCompat">
+        <item name="android:background">@color/cimsorBar</item>
+        <item name="android:textSize">28dp</item>
+        <item name="android:textColor">@color/cimsorText</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:layout_height">55dp</item>
+    </style>
+    <!-- Címsor(a képernyő felső csoportja (controlBar + controlBack) -->
+    <style name="controlRow" parent="Theme.AppCompat">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <!-- Vissza gomb -->
+    <style name="controlBack" parent="Theme.AppCompat">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@color/cimsorBar</item>
+        <item name="android:layout_width">42dp</item>
+    </style>
+    <!-- A kepernyőn megjelenő nagyobb címlabelek -->
+    <style name="controlTextView" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">28dp</item>
+        <item name="android:textColor">@color/cimsorTextB</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <!-- Ürlapokhoz használható beviteli mező -->
+    <style name="controlEditText" parent="Theme.AppCompat">
+        <item name="android:textColor">@color/cimsorTextB</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColorHint">@color/cimsorTextB</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <!-- Ürlapokhoz használható legördülő lista -->
+    <style name="controlSpinner" parent="Theme.AppCompat">
+        <item name="android:textColor">@color/cimsorTextB</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:layout_height">42dp</item>
+    </style>
+    <!-- Ürlapokhoz használható label-ek! -->
+    <style name="controlTextLabel" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">20dp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/cimsorTextB</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+
+    </style>
+    <!-- Ürlapokhoz használható funkciógomb -->
+    <style name="controlActionButton" parent="Theme.AppCompat">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:backgroundTint">@color/cimsorText</item>
+        <item name="srcCompat">@drawable/save_icon</item>
+    </style>
+    <!-- Funkciógomb felirat -->
+    <style name="controlActionLabel" parent="Theme.AppCompat">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_gravity"> center</item>
+        <item name="android:backgroundTint">@color/cimsorText</item>
+        <item name="srcCompat">@drawable/save_icon</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <!-- A téglalap alakú megjelenő gombok -->
+    <style name="controlButtonView" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/cimsorTextB</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="controlButtonView1" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/cimsorTextB</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+</resources>

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bcg"
+    android:orientation="vertical"
+    android:scrollbars="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            app:cardBackgroundColor="#00FFFFFF"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="true"
+            app:contentPadding="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="fill"
+                android:orientation="vertical">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="#00FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/username"
+                            android:layout_width="287dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="Felhasználó neve"
+                            android:textColor="@color/cimsorTextB"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|right"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|right|end"
+                            app:srcCompat="@drawable/ic_outline_account_circle_24" />
+                    </LinearLayout>
+
+                </TableRow>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="154dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#BCFFFFFF"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#00FFFFFF"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="@color/cimsorBar"
+                    app:cardCornerRadius="5dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00FFFFFF"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#00FFFFFF"
+                            android:gravity="center|start"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Egyenleged:"
+                            android:textColor="@color/cimsorText"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+                </androidx.cardview.widget.CardView>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00FFFFFF">
+
+                    <TextView
+                        android:id="@+id/balance"
+                        android:layout_width="match_parent"
+                        android:layout_height="94dp"
+                        android:background="#2FFFFFFF"
+                        android:elevation="0dp"
+                        android:gravity="fill|fill_horizontal"
+                        android:text="0 Ft"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:textSize="50sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#3CB371"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:contentPadding="5dp">
+
+            <Button
+                android:id="@+id/buttonBevetel"
+                style="@style/controlButtonView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/mentesGomb"
+                android:drawableRight="@drawable/ionic_ios_arrow_back"
+                android:paddingLeft="5dp"
+                android:text="@string/user_bevetel"
+                android:textColor="@color/cimsorText"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            app:cardBackgroundColor="#FF0000"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:contentPadding="5dp">
+
+            <Button
+                android:id="@+id/buttonKiadas"
+                style="@style/controlButtonView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/elvetesGomb"
+                android:drawableRight="@drawable/ionic_ios_arrow_back"
+                android:paddingLeft="5dp"
+                android:text="@string/user_kiadas"
+                android:textColor="@color/cimsorText"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="124dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#00FFFFFF"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="10dp">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="115dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="5dp"
+                    android:background="#00FFFFFF"
+                    android:gravity="center|fill_horizontal|fill_vertical">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="29dp"
+                        android:background="#00FFFFFF"
+                        android:gravity="center">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/FButtonBevHozz"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:background="#00FFFFFF"
+                            android:clickable="true"
+                            android:contentDescription="TODO"
+                            android:elevation="0dp"
+                            app:backgroundTint="@color/cimsorText"
+                            app:borderWidth="5dp"
+                            app:elevation="0dp"
+                            app:hoveredFocusedTranslationZ="8dp"
+                            app:maxImageSize="48dp"
+                            app:rippleColor="#1DA75F"
+                            app:srcCompat="@drawable/hozzaad" />
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/FButtonKiadHozz"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:background="#00FFFFFF"
+                            android:clickable="true"
+                            android:elevation="0dp"
+                            app:backgroundTint="@color/cimsorText"
+                            app:borderWidth="5dp"
+                            app:elevation="0dp"
+                            app:hoveredFocusedTranslationZ="8dp"
+                            app:maxImageSize="48dp"
+                            app:rippleColor="#EF404D"
+                            app:srcCompat="@drawable/kiadas" />
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/FButtonBeallit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:background="#00FFFFFF"
+                            android:clickable="true"
+                            android:elevation="0dp"
+                            app:backgroundTint="@color/cimsorText"
+                            app:borderWidth="5dp"
+                            app:elevation="0dp"
+                            app:hoveredFocusedTranslationZ="8dp"
+                            app:maxImageSize="48dp"
+                            app:rippleColor="#0367B9"
+                            app:srcCompat="@drawable/settings" />
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/FButtonKilep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:background="#00FFFFFF"
+                            android:clickable="true"
+                            android:elevation="0dp"
+                            app:backgroundTint="@color/cimsorText"
+                            app:borderWidth="5dp"
+                            app:elevation="0dp"
+                            app:hoveredFocusedTranslationZ="8dp"
+                            app:maxImageSize="48dp"
+                            app:rippleColor="#2CB5EC"
+                            app:srcCompat="@drawable/kilep" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#00FFFFFF"
+                        android:gravity="bottom|center">
+
+                        <TextView
+                            android:id="@+id/textView19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:background="#00FFFFFF"
+                            android:gravity="center|center_horizontal"
+                            android:text="@string/Bevetel"
+                            android:textColor="@color/cimsorTextB"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:background="#00FFFFFF"
+                            android:gravity="center|center_horizontal"
+                            android:text="@string/Kiadas"
+                            android:textColor="@color/cimsorTextB"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:background="#00FFFFFF"
+                            android:gravity="center|center_horizontal"
+                            android:text="@string/BeallitasokMenu"
+                            android:textColor="@color/cimsorTextB"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:background="#00FFFFFF"
+                            android:gravity="center|center_horizontal"
+                            android:text="@string/btn_kijel"
+                            android:textColor="@color/cimsorTextB"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                </TableLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

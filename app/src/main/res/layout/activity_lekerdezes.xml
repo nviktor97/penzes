@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Lekerdezes">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="@color/cimsorBar"
+        app:cardCornerRadius="15dp"
+        app:contentPadding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/cimsorText"
+                app:cardCornerRadius="15dp"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|top"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        style="@style/controlActionLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/Lekerdezes"
+                        android:textAllCaps="true"
+                        android:textColor="@color/cimsorTextB"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:typeface="normal" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        app:cardBackgroundColor="@color/mentesGomb"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="0dp"
+                        app:contentPadding="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView38"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:padding="5dp"
+                                android:text="Kérlek add meg a sikeres lekérdezéshez a következő információkat!"
+                                android:textAlignment="center"
+                                android:textColor="@color/cimsorText"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/Datum"
+                        android:textAlignment="viewStart"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textViewDateTOL"
+                            android:layout_width="273dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="fill"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="2dp"
+                            android:drawableStart="@drawable/pay_calendar"
+                            android:drawablePadding="10dp"
+                            android:gravity="center|start"
+                            android:hint="@string/Datum_valasztas"
+                            android:padding="10dp"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/textView40"
+                            android:layout_width="83dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="fill"
+                            android:gravity="center|start"
+                            android:text="@string/Datumtol"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textViewDateIG"
+                            android:layout_width="273dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="2dp"
+                            android:drawableStart="@drawable/pay_calendar"
+                            android:drawablePadding="10dp"
+                            android:gravity="center|start"
+                            android:hint="@string/Datum_valasztas"
+                            android:padding="10dp"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/textView42"
+                            android:layout_width="83dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="fill"
+                            android:gravity="center|start"
+                            android:text="@string/Datumig"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/tipus"
+                        android:textAlignment="viewStart"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <RadioGroup
+                        android:id="@+id/tipusGroup"
+                        android:layout_width="372dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|left"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioBevetel"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="25dp"
+                            android:gravity="center"
+                            android:text="@string/Bevetel"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioKiadas"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="25dp"
+                            android:gravity="center"
+                            android:text="@string/Kiadas"
+                            android:textSize="18sp" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/textView30"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/Kategoria_valasztas"
+                        android:textAlignment="viewStart"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_gravity="center|start"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            app:srcCompat="@drawable/kategori"
+                            tools:srcCompat="@drawable/kategori" />
+
+                        <Spinner
+                            android:id="@+id/spinnerKategoria"
+                            android:layout_width="match_parent"
+                            android:layout_height="43dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:dropDownWidth="match_parent"
+                            android:entries="@array/Kategoriak_spinner"
+                            android:gravity="center"
+                            android:spinnerMode="dialog" />
+                    </TableRow>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        app:cardBackgroundColor="@color/cimsorBar"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp"
+                        app:contentPadding="5dp">
+
+                        <Button
+                            android:id="@+id/buttonLekerdezes"
+                            style="@style/controlButtonView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/cimsorBar"
+                            android:drawableLeft="@drawable/querya"
+                            android:drawablePadding="20dp"
+                            android:paddingLeft="5dp"
+                            android:text="@string/Lekerdezes"
+                            android:textColor="@color/cimsorText"
+                            android:textStyle="bold" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

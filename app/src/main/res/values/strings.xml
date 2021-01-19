@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Penzugyi</string>
+    <string name="BeallitasokMenu">Beállítások</string>
+    <string name="BeallitasokMenuG1">Egyenleg és pénznem beállítása</string>
+    <string name="BeallitasokMenuT1">Pénzügyek</string>
+    <string name="BeallitasokMenuT2">Fiók beállítása</string>
+    <string name="BeallitasokMenuG2">Fiók adatok módosítása</string>
+    <string name="BeallitasokMenuG3">Fiók törlése</string>
+    <string name="BeallitasokEP">Pénzügyek</string>
+    <string name="BeallitasokEPT1">Egyenleg megadása:</string>
+    <string name="BeallitasokEPT2">Pénznem megadása:</string>
+    <string name="Mentés">Mentés</string>
+    <string name="BeallitasokAM">Adatmódosítás</string>
+    <string name="BeallitasokAM_Nev">Név:</string>
+    <string name="BeallitasokAM_Email">Email cím:</string>
+    <string name="BeallitasokAM_Pass">Jelszó:</string>
+    <string name="BeallitasokFIOKT">Megerősítés</string>
+    <string name="BeallitasokFIOKTorol">Véglegesen törlöd a felhasználói fiókodat?</string>
+    <string name="BeallitasokFIOKTorolT1">Fiókod törlésével törlésre kerül minden adat a rendszerben amit rögzítettél az alkalmazás használata során! A folyamat vissza nem fordítható!</string>
+    <string name="Töröl">Törlés</string>
+    <string name="Vissza">Vissza</string>
+    <string name="Bejelentkezes">Bejelentkezés</string>
+    <string name="bar">bar</string>
+    <string name="BelepesEmail">E-mail cím</string>
+    <string name="BelepesPw">Jelszó</string>
+    <string name="BelepesRememberme">Maradjak bejelentkezve</string>
+    <string name="regisztracio">Regisztráció</string>
+    <string name="udvozollek">Üdvözöllek</string>
+    <string name="user_name">xy!</string>
+    <string name="egyenleged">Egyenleged</string>
+    <string name="user_money">12345678910 Ft</string>
+    <string name="user_bevetel">Bevételek összesen: 0 Ft</string>
+    <string name="user_kiadas">Kiadások összesen: 0 Ft</string>
+    <string name="btn_bev">Bevétel</string>
+    <string name="btn_kiad">Kiadás</string>
+    <string name="btn_beall">Beállítások</string>
+    <string name="btn_kijel">Kilépés</string>
+    <string name="TetelHozzaadas">Tétel hozzáadása</string>
+    <string name="TetelOsszege">Összeg:</string>
+    <string name="Datum">Dátum:</string>
+    <string name="Bevetel">Bevétel</string>
+    <string name="Kiadas">Kiadás</string>
+    <string name="Kategoria_valasztas">Kategória:</string>
+    <string name="Hozzaadas">Hozzáadás</string>
+    <string name="Datum_valasztas">Dátum kiválasztása</string>
+    <string name="Datumtol">-tól</string>
+    <string name="Datumig">-ig</string>
+    <string name="Lekerdezes">Lekérdezés</string>
+    <string name="regTitle">Regisztráció</string>
+    <string name="nameField">Név</string>
+    <string name="passField">Jelszó</string>
+    <string name="mailField">Email cím</string>
+    <string name="acceptText">Szerződés elfogadása</string>
+    <string name="regButton">Regisztráció</string>
+    <string name="AppName">MoneyManager</string>
+    <string name="bejelentkezésadatmegadása">Kérlek add meg a bejelentkezési adataidat!</string>
+    <string name="regisztral">Kérlek add meg a regisztrációhoz szükséges információkat!</string>
+    <string name="regnev">Név</string>
+    <string name="datum">Dátum</string>
+    <string name="ertek">Összeg</string>
+    <string name="tipus">Típus:</string>
+    <string name="tetelhozad">Kérlek add meg a tétel információit!</string>
+
+    <string-array name="Kategoriak_spinner">
+        <item>Kat1</item>
+        <item>Kat2</item>
+        <item>Kat3</item>
+        <item>Kat4</item>
+    </string-array>
+    <string-array name="spinnerPenznem">
+        <item>HUF(Forint)</item>
+        <item>EUR(Euró)</item>
+        <item>USD(Dollár)</item>
+    </string-array>
+</resources>
