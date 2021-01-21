@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
-        <activity android:name=".Lekerdezes"></activity>
         <activity android:name=".TetelHozzaadas" />
         <activity android:name=".Regisztracio" />
         <activity android:name=".Belepes" />

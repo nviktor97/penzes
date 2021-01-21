@@ -124,7 +124,7 @@ public class Fooldal extends AppCompatActivity {
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
             nev.setText(userName);
-            egyenleg.setText(userBalance + " Ft");
+
             SharedPreferences pref = getApplicationContext().getSharedPreferences("Adatok", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = pref.edit();
             editor.putInt("id", userID);
@@ -241,6 +241,8 @@ public class Fooldal extends AppCompatActivity {
             super.onPostExecute(result);
             bevetel.setText("Bevételek összesen: " + userIncome + " Ft");
             kiadas.setText("Kiadások összesen: " + userOutcome + " Ft");
+            Integer userbalanceds = (int) userIncome - (int) userOutcome;
+            egyenleg.setText(userbalanceds + " Ft");
         }
 
         @Override

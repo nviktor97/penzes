@@ -185,48 +185,6 @@
 
                     </TableRow>
 
-                    <TextView
-                        android:id="@+id/textView30"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="@string/Kategoria_valasztas"
-                        android:textAlignment="viewStart"
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_marginTop="5dp">
-
-                        <ImageView
-                            android:id="@+id/imageView3"
-                            android:layout_width="38dp"
-                            android:layout_height="38dp"
-                            android:layout_gravity="center|start"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginBottom="10dp"
-                            app:srcCompat="@drawable/kategori"
-                            tools:srcCompat="@drawable/kategori" />
-
-                        <Spinner
-                            android:id="@+id/spinnerKategoria"
-                            android:layout_width="match_parent"
-                            android:layout_height="43dp"
-                            android:layout_gravity="center"
-                            android:layout_margin="5dp"
-                            android:dropDownWidth="match_parent"
-                            android:entries="@array/Kategoriak_spinner"
-                            android:gravity="center"
-                            android:spinnerMode="dialog" />
-                    </TableRow>
-
                 </LinearLayout>
 
                 <LinearLayout

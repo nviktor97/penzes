@@ -78,23 +78,6 @@
 
                         </androidx.recyclerview.widget.RecyclerView>
 
-                        <Button
-                            android:id="@+id/buttonLekerdezes2"
-                            style="@style/controlButtonView1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@color/cimsorBar"
-                            android:drawableLeft="@drawable/querya"
-                            android:drawablePadding="20dp"
-                            android:paddingLeft="5dp"
-                            android:text="Szűrés"
-                            android:textAlignment="viewStart"
-                            android:textColor="@color/cimsorText"
-                            android:textStyle="bold"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
-
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>

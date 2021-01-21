@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
-public class TetelHozzaadas extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class TetelHozzaadas extends AppCompatActivity  {
 
     private static final String TAG = "TetelHozzaadas";
     private TextView mDisplayDate;
@@ -36,11 +36,7 @@ public class TetelHozzaadas extends AppCompatActivity implements AdapterView.OnI
             }
         });
 
-        Spinner spinner = findViewById(R.id.spinnerKategoria);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Kategoriak_spinner, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
+
 
 
         mDisplayDate = findViewById(R.id.textViewDate);
@@ -70,13 +66,5 @@ public class TetelHozzaadas extends AppCompatActivity implements AdapterView.OnI
 
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
 }

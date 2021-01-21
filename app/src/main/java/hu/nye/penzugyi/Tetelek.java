@@ -34,7 +34,6 @@ public class Tetelek extends AppCompatActivity {
     private TetelAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private Integer UserID;
-    private Button szures;
 
     ArrayList<TetelItem> newItemList = new ArrayList<>();
 
@@ -53,14 +52,7 @@ public class Tetelek extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
 
-        szures = findViewById(R.id.buttonLekerdezes2);
-        szures.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent Hiv = new Intent(getApplicationContext(),hu.nye.penzugyi.Lekerdezes.class);
-                startActivity(Hiv);
-            }
-        });
+
 
         SharedPreferences pref = getApplicationContext().getSharedPreferences("Adatok", Context.MODE_PRIVATE);
         UserID = pref.getInt("id", 0);
