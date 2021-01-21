@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 
 public class BeallitasokMenu extends AppCompatActivity {
 
-    Button egyenlegpenznem;
+
     Button fiokadatok;
     Button fioktorles;
 
@@ -19,18 +19,12 @@ public class BeallitasokMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beallitasok_menu);
 
-        egyenlegpenznem = findViewById(R.id.BeallitasokEPButt);
+
         fiokadatok = findViewById(R.id.BeallitasokFAM);
         fioktorles = findViewById(R.id.BeallitasokFTO);
 
 
-        egyenlegpenznem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent EPHiv = new Intent(getApplicationContext(),hu.nye.penzugyi.BeallitasokEP.class);
-                startActivity(EPHiv);
-            }
-        });
+
 
         fiokadatok.setOnClickListener(new View.OnClickListener() {
             @Override

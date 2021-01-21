@@ -16,7 +16,6 @@
         <activity android:name=".Fooldal" />
         <activity android:name=".BeallitasokFTorol" />
         <activity android:name=".BeallitasokAM" />
-        <activity android:name=".BeallitasokEP" />
         <activity android:name=".BeallitasokMenu" />
         <activity android:name=".Tetelek" />
         <activity android:name=".MainActivity">
