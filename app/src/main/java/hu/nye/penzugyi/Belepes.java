@@ -41,9 +41,6 @@ public class Belepes extends AppCompatActivity {
         Belepes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(getApplicationContext(),"Sikeres bejelentkezés!",Toast.LENGTH_SHORT).show();
-                //Intent Hiv = new Intent(getApplicationContext(),hu.nye.penzugyi.Fooldal.class);
-                //startActivity(Hiv);
                 String email_sz = email.getText().toString();
                 String jelszo_sz = jelszo.getText().toString();
                 if(email_sz.isEmpty() || jelszo_sz.isEmpty()){
@@ -69,7 +66,6 @@ public class Belepes extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             s = s.trim();
-            Toast.makeText(getApplicationContext(),s,Toast.LENGTH_SHORT).show();
             if(s.equals("0")){
                 Toast.makeText(getApplicationContext(),"Sikeres bejelentkezés!",Toast.LENGTH_SHORT).show();
                 final EditText email = findViewById(R.id.editTextBejEmail);
