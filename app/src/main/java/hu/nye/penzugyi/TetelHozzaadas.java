@@ -116,14 +116,8 @@ public class TetelHozzaadas extends AppCompatActivity  {
     private class TetelHozzaad extends AsyncTask<String, Void, String> {
         @Override
         protected void onPostExecute(String s) {
-            Log.d("SAJAT", "Válasz:" + s);
-            s = s.trim();
-            if(s.equals("null")){
-                Intent Hiv = new Intent(getApplicationContext(),hu.nye.penzugyi.Fooldal.class);
-                startActivity(Hiv);
-            }else{
-                Toast.makeText(getApplicationContext(),"HIBA!",Toast.LENGTH_SHORT).show();
-            }
+            Intent Hiv = new Intent(getApplicationContext(),hu.nye.penzugyi.Fooldal.class);
+            startActivity(Hiv);
         }
 
         @Override
