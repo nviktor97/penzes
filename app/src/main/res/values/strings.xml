@@ -60,6 +60,7 @@
     <string name="ertek">Összeg</string>
     <string name="tipus">Típus:</string>
     <string name="tetelhozad">Kérlek add meg a tétel információit!</string>
+    <string name="TetelNev">Név:</string>
 
     <string-array name="Kategoriak_spinner">
         <item>Kat1</item>

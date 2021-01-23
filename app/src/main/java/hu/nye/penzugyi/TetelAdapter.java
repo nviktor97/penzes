@@ -6,6 +6,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,6 +20,14 @@ import java.util.ArrayList;
 
 public class TetelAdapter extends RecyclerView.Adapter<TetelAdapter.TetelAdapterViewHolder>{
     private ArrayList<TetelItem> mTetelList;
+    private OnItemClickListener mListener;
+
+    public interface OnItemClickListener{
+        void onItemClick(int position);
+        void onDeleteClick(int position);
+    }
+
+    void setOnItemClickListener(OnItemClickListener listener){ mListener = listener; }
 
     void setNewList(ArrayList<TetelItem> mTetelList) {
         this.mTetelList = mTetelList;
@@ -28,12 +39,26 @@ public class TetelAdapter extends RecyclerView.Adapter<TetelAdapter.TetelAdapter
         public TextView mDatum;
         public TextView mErtek;
         public TextView mTipus;
+        public Button mTorles;
 
-        public TetelAdapterViewHolder(@NonNull View itemView) {
+        public TetelAdapterViewHolder(@NonNull View itemView, final OnItemClickListener listener) {
             super(itemView);
             mNev = itemView.findViewById(R.id.tetel_nev);
             mDatum = itemView.findViewById(R.id.tetel_datum);
             mErtek = itemView.findViewById(R.id.tetel_ertek);
+            mTorles = itemView.findViewById(R.id.button_torol);
+
+            mTorles.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(listener != null){
+                        int position = getAdapterPosition();
+                        if(position != RecyclerView.NO_POSITION){
+                            listener.onDeleteClick(position);
+                        }
+                    }
+                }
+            });
         }
     }
 
@@ -44,7 +69,7 @@ public class TetelAdapter extends RecyclerView.Adapter<TetelAdapter.TetelAdapter
     @Override
     public TetelAdapterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.tetelitem, parent, false);
-        TetelAdapterViewHolder nav = new TetelAdapterViewHolder(v);
+        TetelAdapterViewHolder nav = new TetelAdapterViewHolder(v, mListener);
         return nav;
     }
 

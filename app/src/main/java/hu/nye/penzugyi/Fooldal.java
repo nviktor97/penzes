@@ -128,6 +128,7 @@ public class Fooldal extends AppCompatActivity {
             SharedPreferences pref = getApplicationContext().getSharedPreferences("Adatok", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = pref.edit();
             editor.putInt("id", userID);
+            editor.putString("name", userName);
             editor.commit();
             LekerTetelek lekerTetelek = new LekerTetelek();
             lekerTetelek.execute(userID);
