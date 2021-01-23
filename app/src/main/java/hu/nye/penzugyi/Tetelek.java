@@ -100,12 +100,6 @@ public class Tetelek extends AppCompatActivity {
     }
 
     private class Torol extends AsyncTask<String, Void, String>{
-        @Override
-        protected void onPostExecute(String s) {
-            Intent Hiv = new Intent(getApplicationContext(),hu.nye.penzugyi.Tetelek.class);
-            startActivity(Hiv);
-            finish();
-        }
 
         @Override
         protected String doInBackground(String... strings) {
@@ -255,5 +249,14 @@ public class Tetelek extends AppCompatActivity {
             return null;
         }
 
+    }
+
+    public void onBackPressed() {
+
+        Intent intent = new Intent(Tetelek.this, Fooldal.class);
+        startActivity(intent);
+        Tetelek.this.finish();
+
+        return;
     }
 }

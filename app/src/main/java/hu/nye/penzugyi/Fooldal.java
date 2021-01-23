@@ -75,6 +75,7 @@ public class Fooldal extends AppCompatActivity {
             public void onClick(View v) {
                 Intent Hiv = new Intent(getApplicationContext(),hu.nye.penzugyi.TetelHozzaadas.class);
                 startActivity(Hiv);
+                Fooldal.this.finish();
             }
         });
 
@@ -83,14 +84,22 @@ public class Fooldal extends AppCompatActivity {
             public void onClick(View v) {
                 Intent Hiv = new Intent(getApplicationContext(),hu.nye.penzugyi.TetelHozzaadas.class);
                 startActivity(Hiv);
+                Fooldal.this.finish();
             }
         });
 
         ButtonKilep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent Hiv = new Intent(getApplicationContext(),hu.nye.penzugyi.Belepes.class);
-                startActivity(Hiv);
+                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("Adatok",Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.clear();
+                boolean commit = editor.commit();
+                if(commit) {
+                    Intent Hiv = new Intent(getApplicationContext(), hu.nye.penzugyi.Belepes.class);
+                    startActivity(Hiv);
+                    Fooldal.this.finish();
+                }
             }
         });
         bevetel.setOnClickListener(new View.OnClickListener() {
@@ -98,6 +107,7 @@ public class Fooldal extends AppCompatActivity {
             public void onClick(View v) {
                 Intent Hiv = new Intent(getApplicationContext(),hu.nye.penzugyi.Tetelek.class);
                 startActivity(Hiv);
+                Fooldal.this.finish();
             }
         });
 
@@ -106,6 +116,7 @@ public class Fooldal extends AppCompatActivity {
             public void onClick(View v) {
                 Intent Hiv = new Intent(getApplicationContext(),hu.nye.penzugyi.Tetelek.class);
                 startActivity(Hiv);
+                Fooldal.this.finish();
             }
         });
 

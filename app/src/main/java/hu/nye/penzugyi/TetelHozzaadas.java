@@ -116,8 +116,9 @@ public class TetelHozzaadas extends AppCompatActivity  {
     private class TetelHozzaad extends AsyncTask<String, Void, String> {
         @Override
         protected void onPostExecute(String s) {
-            Intent Hiv = new Intent(getApplicationContext(),hu.nye.penzugyi.Fooldal.class);
-            startActivity(Hiv);
+            Intent intent = new Intent(TetelHozzaadas.this, Fooldal.class);
+            startActivity(intent);
+            TetelHozzaadas.this.finish();
         }
 
         @Override
@@ -152,6 +153,16 @@ public class TetelHozzaadas extends AppCompatActivity  {
             }
             return result;
         }
+    }
+
+
+    public void onBackPressed() {
+
+        Intent intent = new Intent(TetelHozzaadas.this, Fooldal.class);
+        startActivity(intent);
+        TetelHozzaadas.this.finish();
+
+        return;
     }
 
 

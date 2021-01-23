@@ -34,32 +34,42 @@ public class Belepes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        BejelentkezveM = findViewById(R.id.SwitchMarad);
-        final EditText email = findViewById(R.id.editTextBejEmail);
-        final EditText jelszo = findViewById(R.id.editTextBejPassword);
-        Belepes = findViewById(R.id.ButtonBE);
-        Belepes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String email_sz = email.getText().toString();
-                String jelszo_sz = jelszo.getText().toString();
-                if(email_sz.isEmpty() || jelszo_sz.isEmpty()){
-                    Toast.makeText(getApplicationContext(),"Minden mező kitöltése kötelező!",Toast.LENGTH_SHORT).show();
-                }else {
-                    Belep belep = new Belep();
-                    belep.execute(email_sz, jelszo_sz);
-                }
-            }
-        });
 
-        Regisztracio =findViewById(R.id.ButtonREG);
-        Regisztracio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent Hiv = new Intent(getApplicationContext(),hu.nye.penzugyi.Regisztracio.class);
-                startActivity(Hiv);
-            }
-        });
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("Adatok",Context.MODE_PRIVATE);
+        String mail = sharedPreferences.getString("email",null);
+
+        if(mail != null){
+            Intent intent = new Intent(Belepes.this,Fooldal.class);
+            Belepes.this.startActivity(intent);
+            Belepes.this.finish();
+        }else{
+            BejelentkezveM = findViewById(R.id.SwitchMarad);
+            final EditText email = findViewById(R.id.editTextBejEmail);
+            final EditText jelszo = findViewById(R.id.editTextBejPassword);
+            Belepes = findViewById(R.id.ButtonBE);
+            Belepes.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String email_sz = email.getText().toString();
+                    String jelszo_sz = jelszo.getText().toString();
+                    if(email_sz.isEmpty() || jelszo_sz.isEmpty()){
+                        Toast.makeText(getApplicationContext(),"Minden mező kitöltése kötelező!",Toast.LENGTH_SHORT).show();
+                    }else {
+                        Belep belep = new Belep();
+                        belep.execute(email_sz, jelszo_sz);
+                    }
+                }
+            });
+
+            Regisztracio =findViewById(R.id.ButtonREG);
+            Regisztracio.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent Hiv = new Intent(getApplicationContext(),hu.nye.penzugyi.Regisztracio.class);
+                    startActivity(Hiv);
+                }
+            });
+        }
 
     }
     private class Belep extends AsyncTask<String, Void, String> {
@@ -74,7 +84,8 @@ public class Belepes extends AppCompatActivity {
                 SharedPreferences.Editor editor = pref.edit();
                 editor.putString("email", email.getText().toString());
                 editor.commit();
-                startActivity(Hiv);
+                Belepes.this.startActivity(Hiv);
+                Belepes.this.finish();
             }else if(s.equals("1")){
                 Toast.makeText(getApplicationContext(),"Hibás jelszó!",Toast.LENGTH_SHORT).show();
             }else if(s.equals("2")){
