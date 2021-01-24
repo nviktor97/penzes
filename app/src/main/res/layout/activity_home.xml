@@ -174,7 +174,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:background="@color/mentesGomb"
-                android:drawableRight="@drawable/ionic_ios_arrow_back"
+                android:enabled="false"
                 android:paddingLeft="5dp"
                 android:text="@string/user_bevetel"
                 android:textColor="@color/cimsorText"
@@ -200,9 +200,35 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:background="@color/elvetesGomb"
-                android:drawableRight="@drawable/ionic_ios_arrow_back"
+                android:enabled="false"
                 android:paddingLeft="5dp"
                 android:text="@string/user_kiadas"
+                android:textColor="@color/cimsorText"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            app:cardBackgroundColor="#474444"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:contentPadding="5dp">
+
+            <Button
+                android:id="@+id/buttonTetelek"
+                style="@style/controlButtonView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/cimsorBar"
+                android:drawableEnd="@drawable/ionic_ios_arrow_back"
+                android:paddingLeft="5dp"
+                android:text="@string/user_osszes"
                 android:textColor="@color/cimsorText"
                 android:textSize="18dp"
                 android:textStyle="bold" />

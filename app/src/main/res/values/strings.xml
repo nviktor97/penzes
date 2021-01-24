@@ -64,6 +64,7 @@
     <string name="tetelHozzaad">Tétel hozzáadása</string>
     <string name="BeallitasokJelenlegi">Jelenlegi jelszó:</string>
     <string name="BeallitasokUj">Új jelszó:</string>
+    <string name="user_osszes">Összes tétel</string>
 
     <string-array name="Kategoriak_spinner">
         <item>Kat1</item>

@@ -38,6 +38,7 @@ public class Fooldal extends AppCompatActivity {
     FloatingActionButton ButtonKilep;
     Button bevetel;
     Button kiadas;
+    Button tetelek;
     TextView nev;
     TextView egyenleg;
 
@@ -57,6 +58,7 @@ public class Fooldal extends AppCompatActivity {
         ButtonKilep= findViewById(R.id.FButtonKilep);
         bevetel= findViewById(R.id.buttonBevetel);
         kiadas= findViewById(R.id.buttonKiadas);
+        tetelek= findViewById(R.id.buttonTetelek);
         nev= findViewById(R.id.username);
         egyenleg= findViewById(R.id.balance);
 
@@ -91,7 +93,7 @@ public class Fooldal extends AppCompatActivity {
                 }
             }
         });
-        bevetel.setOnClickListener(new View.OnClickListener() {
+        tetelek.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent Hiv = new Intent(getApplicationContext(),hu.nye.penzugyi.Tetelek.class);
@@ -100,14 +102,6 @@ public class Fooldal extends AppCompatActivity {
             }
         });
 
-        kiadas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent Hiv = new Intent(getApplicationContext(),hu.nye.penzugyi.Tetelek.class);
-                startActivity(Hiv);
-                Fooldal.this.finish();
-            }
-        });
 
         SharedPreferences pref = getApplicationContext().getSharedPreferences("Adatok", Context.MODE_PRIVATE);
         String semail = pref.getString("email", null);
