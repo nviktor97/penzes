@@ -3,9 +3,11 @@ package hu.nye.penzugyi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +30,7 @@ public class BeallitasokAM extends AppCompatActivity {
    private EditText Nev;
    private EditText Email;
    private EditText Password;
+   private EditText Password_new;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class BeallitasokAM extends AppCompatActivity {
         Nev = findViewById(R.id.editTextName);
         Email = findViewById(R.id.editTextEmailcim);
         Password = findViewById(R.id.editTextPasswords);
+        Password_new = findViewById(R.id.editTextPasswords2);
 
         SharedPreferences pref = getApplicationContext().getSharedPreferences("Adatok", Context.MODE_PRIVATE);
         Email.setText(pref.getString("email", ""));
@@ -46,23 +50,14 @@ public class BeallitasokAM extends AppCompatActivity {
         Mentes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String nev, email, jelszo, eredeti_email;
-                nev = "";
-                email = "";
-                jelszo = "";
-                if(!Nev.getText().toString().equals("")){
-                    nev = Nev.getText().toString();
+                if(Password.getText().toString().matches("")){
+                    Toast.makeText(getApplicationContext(),"Minden mező kitöltése kötelező!",Toast.LENGTH_SHORT).show();
+                }else if(Password_new.getText().toString().matches("")){
+                    Toast.makeText(getApplicationContext(),"Minden mező kitöltése kötelező!",Toast.LENGTH_SHORT).show();
+                }else{
+                    Adatmodosit adatmodosit = new Adatmodosit();
+                    adatmodosit.execute(Email.getText().toString(),Password.getText().toString(),Password_new.getText().toString());
                 }
-                if(!Email.getText().toString().equals("")){
-                    email = Email.getText().toString();
-                }
-                if(!Password.getText().toString().equals("")){
-                    jelszo = Password.getText().toString();
-                }
-                SharedPreferences pref = getApplicationContext().getSharedPreferences("Adatok", Context.MODE_PRIVATE);
-                eredeti_email = pref.getString("email","");
-                Adatmodosit adatmodosit = new Adatmodosit();
-                adatmodosit.execute(nev,email,jelszo,eredeti_email);
             }
         });
 
@@ -74,44 +69,30 @@ public class BeallitasokAM extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             if(s.equals("0")){
-                String nev, email;
-                nev = "";
-                email = "";
-                SharedPreferences pref = getApplicationContext().getSharedPreferences("Adatok", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = pref.edit();
-                if(!Nev.getText().toString().equals("")){
-                    nev = Nev.getText().toString();
-                    editor.putString("name", nev);
-                }
-                if(!Email.getText().toString().equals("")){
-                    email = Email.getText().toString();
-                    editor.putString("email", email);
-                }
-                editor.commit();
                 Toast.makeText(BeallitasokAM.this, "Sikeres adatmódosítás", Toast.LENGTH_SHORT).show();
+                BeallitasokAM.this.finish();
             }else{
-                Toast.makeText(BeallitasokAM.this, "Sikertelen adatmódosítás", Toast.LENGTH_SHORT).show();
+                Toast.makeText(BeallitasokAM.this, "Nem egyezik a régi jelszavad.", Toast.LENGTH_SHORT).show();
             }
         }
 
         @Override
         protected String doInBackground(String... strings) {
-            String nev = strings[0];
-            String email = strings[1];
-            String jelszo = strings[2];
-            String eredeti_email = strings[3];
+            String email = strings[0];
+            String pw = strings[1];
+            String pw_new = strings[2];
             String result = null;
             HttpURLConnection conn;
             URL url;
             try{
-                url = new URL("https://studentlab.nye.hu/~penzugyi/adatmodosit.php");
+                url = new URL("https://studentlab.nye.hu/~penzugyi/jelszomodosit.php");
                 conn = (HttpURLConnection) url.openConnection();
                 conn.setDoInput(true);
                 conn.setDoOutput(true);
                 conn.setRequestMethod("POST");
 
                 OutputStreamWriter ki = new OutputStreamWriter(conn.getOutputStream());
-                ki.write("nev="+nev+"&email="+email+"&jelszo="+jelszo+"&eredeti_email="+eredeti_email);
+                ki.write("email="+email+"&regijelszo="+pw+"&ujjelszo="+pw_new);
                 ki.flush();
                 ki.close();
                 if( conn.getResponseCode() == HttpURLConnection.HTTP_OK ){

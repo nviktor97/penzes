@@ -62,6 +62,8 @@
     <string name="tetelhozad">Kérlek add meg a tétel információit!</string>
     <string name="TetelNev">Név:</string>
     <string name="tetelHozzaad">Tétel hozzáadása</string>
+    <string name="BeallitasokJelenlegi">Jelenlegi jelszó:</string>
+    <string name="BeallitasokUj">Új jelszó:</string>
 
     <string-array name="Kategoriak_spinner">
         <item>Kat1</item>

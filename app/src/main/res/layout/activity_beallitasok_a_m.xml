@@ -110,6 +110,7 @@
                         android:drawableStart="@drawable/reg1"
                         android:drawablePadding="10dp"
                         android:ems="10"
+                        android:enabled="false"
                         android:inputType="textPersonName"
                         android:paddingLeft="10dp"
                         android:textColor="@color/cimsorTextB"
@@ -140,6 +141,7 @@
                         android:drawableStart="@drawable/emaile"
                         android:drawablePadding="10dp"
                         android:ems="10"
+                        android:enabled="false"
                         android:inputType="textEmailAddress"
                         android:paddingLeft="10dp"
                         android:textColor="@color/cimsorTextB"
@@ -153,13 +155,43 @@
                         android:layout_marginTop="20dp"
                         android:layout_marginRight="5dp"
                         android:fontFamily="sans-serif-medium"
-                        android:text="@string/BeallitasokAM_Pass"
+                        android:text="@string/BeallitasokJelenlegi"
                         android:textAlignment="viewStart"
                         android:textColor="#000000"
                         android:textSize="18sp" />
 
                     <EditText
                         android:id="@+id/editTextPasswords"
+                        style="@style/controlEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="2dp"
+                        android:drawableStart="@drawable/password1"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/cimsorTextB"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/BeallitasokUj"
+                        android:textAlignment="viewStart"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextPasswords2"
                         style="@style/controlEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
