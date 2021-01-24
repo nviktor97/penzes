@@ -35,7 +35,6 @@ public class Fooldal extends AppCompatActivity {
 
     FloatingActionButton ButtonBeallit;
     FloatingActionButton ButtonBevHozz;
-    FloatingActionButton ButtonKiadHozz;
     FloatingActionButton ButtonKilep;
     Button bevetel;
     Button kiadas;
@@ -55,7 +54,6 @@ public class Fooldal extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         ButtonBeallit= findViewById(R.id.FButtonBeallit);
         ButtonBevHozz= findViewById(R.id.FButtonBevHozz);
-        ButtonKiadHozz= findViewById(R.id.FButtonKiadHozz);
         ButtonKilep= findViewById(R.id.FButtonKilep);
         bevetel= findViewById(R.id.buttonBevetel);
         kiadas= findViewById(R.id.buttonKiadas);
@@ -71,15 +69,6 @@ public class Fooldal extends AppCompatActivity {
         });
 
         ButtonBevHozz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent Hiv = new Intent(getApplicationContext(),hu.nye.penzugyi.TetelHozzaadas.class);
-                startActivity(Hiv);
-                Fooldal.this.finish();
-            }
-        });
-
-        ButtonKiadHozz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent Hiv = new Intent(getApplicationContext(),hu.nye.penzugyi.TetelHozzaadas.class);

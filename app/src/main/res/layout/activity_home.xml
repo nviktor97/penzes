@@ -259,23 +259,6 @@
                             app:srcCompat="@drawable/hozzaad" />
 
                         <com.google.android.material.floatingactionbutton.FloatingActionButton
-                            android:id="@+id/FButtonKiadHozz"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="5dp"
-                            android:background="#00FFFFFF"
-                            android:clickable="true"
-                            android:elevation="0dp"
-                            app:backgroundTint="@color/cimsorText"
-                            app:borderWidth="5dp"
-                            app:elevation="0dp"
-                            app:hoveredFocusedTranslationZ="8dp"
-                            app:maxImageSize="48dp"
-                            app:rippleColor="#EF404D"
-                            app:srcCompat="@drawable/kiadas" />
-
-                        <com.google.android.material.floatingactionbutton.FloatingActionButton
                             android:id="@+id/FButtonBeallit"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -325,20 +308,7 @@
                             android:layout_margin="5dp"
                             android:background="#00FFFFFF"
                             android:gravity="center|center_horizontal"
-                            android:text="@string/Bevetel"
-                            android:textColor="@color/cimsorTextB"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/textView20"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="5dp"
-                            android:background="#00FFFFFF"
-                            android:gravity="center|center_horizontal"
-                            android:text="@string/Kiadas"
+                            android:text="@string/tetelHozzaad"
                             android:textColor="@color/cimsorTextB"
                             android:textSize="15sp"
                             android:textStyle="bold" />

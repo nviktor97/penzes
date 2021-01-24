@@ -48,7 +48,6 @@ public class Tetelek extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
         ArrayList<TetelItem> itemlist = new ArrayList<>();
-        //itemlist.add(new TetelItem("elsőőőő","2020-01-01", "1000 FT", "BEVETEL"));
         mAdapter = new TetelAdapter(itemlist);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
